@@ -10,7 +10,7 @@ public class 숫자사각형4_2046 {
 		int type = sc.nextInt();
 		switch (type) {
 		case 1:
-			for(int i=1; i<=n; i++) {
+			for(int i=1; i<n+1; i++) {
 				for(int j=0; j<n; j++) {
 					System.out.print(i+" ");
 				}System.out.println();
@@ -19,19 +19,19 @@ public class 숫자사각형4_2046 {
 		case 2:
 			for(int i=0; i<n; i++) {
 				if(i%2==0) {
-					for(int j=1; j<=n; j++) {
+					for(int j=1; j<n+1; j++) {
 						System.out.print(j+" ");
 					}System.out.println();
 				}else {
-					for(int j=n; j>=1; j--) {
+					for(int j=n; j>0; j--) {
 						System.out.print(j+" ");
 					}System.out.println();
 				}
 			}
 			break;
 		case 3:
-			for(int i=1; i<=n; i++) {
-				for(int j=1; j<=n; j++) {
+			for(int i=1; i<n+1; i++) {
+				for(int j=1; j<n+1; j++) {
 					System.out.print(i*j +" ");
 				}System.out.println();
 			}
