@@ -19,7 +19,6 @@ public class 구구단2_1341 {
 			}
 		}
 		gugu();
-
 	}
 
 	private static void gugu() {
