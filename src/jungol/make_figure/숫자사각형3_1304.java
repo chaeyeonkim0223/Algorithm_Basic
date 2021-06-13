@@ -1,4 +1,4 @@
-package jungol.make_Figure;
+package jungol.make_figure;
 
 import java.util.Scanner;
 
