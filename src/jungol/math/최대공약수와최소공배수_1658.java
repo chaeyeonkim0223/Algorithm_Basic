@@ -14,16 +14,17 @@ public class 최대공약수와최소공배수_1658 {
 			b = a;
 			a = temp;
 		}
-		for(int i=1; i<b+1; i++) {
-			if(a%i==0 && b%i==0) {
-				gcd=i;
-			}
-		}
+//		for(int i=1; i<b+1; i++) {
+//			if(a%i==0 && b%i==0) {
+//				gcd=i;
+//			}
+//		}
+		gcd = gcd_get_recursive(a, b);
 		lcm = a * b / gcd;
 		System.out.println(gcd);
 		System.out.println(lcm);
 	}
-	static int gcd_get ( int x, int y) {
+	static int gcd_get (int x, int y) {
 		int r;
 		while(y!=0) { //y가 0이면 x가 최대공약수이므로 종료.
 			r = x%y;
