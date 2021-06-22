@@ -1,7 +1,11 @@
 package jungol.make_figure2;
 
 import java.util.Scanner;
-
+/**
+ * 
+ * @author tomyb
+ *
+ */
 public class 문자마름모_1331 {
 	static int n;
 
