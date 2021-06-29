@@ -1,8 +1,5 @@
 package jungol.math2;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class 소수구하기_1901 {
@@ -19,6 +16,7 @@ public class 소수구하기_1901 {
 				//내 앞,뒤 소수만 확인해봐도 됨. 굳이 2~1000000개의 소수를 다 구하지 않아도 된다.
 				boolean flag = false;
 				for (int j = 0; !flag; j++) {
+					//이 두개는 동시출력이거나 하나만 만족하면 하나만출력하고 끝.
 					if(isPrime(num-j)) {
 						System.out.print(num-j+" ");
 						flag = true;
