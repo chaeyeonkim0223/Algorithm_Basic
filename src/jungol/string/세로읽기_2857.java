@@ -21,7 +21,7 @@ public class 세로읽기_2857 {
 				arr[i][idx++]=now.charAt(j);
 			}
 		}
-		//세로로 읽기
+		//세로로 읽기//
 		for (int i = 0; i < max; i++) {//열
 			for (int j = 0; j < 5; j++) {//행
 				if(arr[j][i]!=' ')System.out.print(arr[j][i]);
