@@ -11,7 +11,7 @@ public class 세로읽기_2857 {
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 15; j++) {
 				arr[i][j]=' ';
-			}
+			}//
 		}
 		for (int i = 0; i < 5; i++) {
 			int idx=0;
