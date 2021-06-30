@@ -26,7 +26,7 @@ public class 각_자리수의_역과_합_1009 {
 			int sum=0;
 			for (int i = 0; i < num.length(); i++) {
 				sum += num.charAt(i)-'0';
-			}
+			}///
 			System.out.println(sum);
 		}
 	}
