@@ -24,7 +24,6 @@ public class 단어세기_1516 {
         	while(st.hasMoreTokens()) {
         		mapExec(st.nextToken());
         	}
-            List<String> keySet = new ArrayList<>(freqMap.keySet());
             List<String> keys = new ArrayList<>(freqMap.keySet());
             Collections.sort(keys);
             for (String key : keys) {
@@ -38,12 +37,6 @@ public class 단어세기_1516 {
             freqMap.put(word, 1);
         } else {
             freqMap.put(word, count + 1);
-        }
-    }
-
-    static private void printMap() {
-        for (String s : freqMap.keySet()) {
-            System.out.println(s + " = " + freqMap.get(s));
         }
     }
 }
