@@ -22,7 +22,7 @@ public class 문자열찾기_fail {
 				for (int j = 0; j < 3 & i+j < str.length & flag_ioi; j++) {
 					if(ioiSTring.charAt(j)!=str[i+j]) flag_ioi = false;
 				}
-				if(flag_ioi) IOI++;
+				if(flag_ioi) IOI++;//
 			}
 		}
 		System.out.println(KOI);
