@@ -11,7 +11,7 @@ public class 진법변환_3106 {
 			if(before==0) break;
 			String n = sc.next();
 			int after = sc.nextInt();
-			//int로 하면 범위 벗어남. 2^63이 1억이 넘기 때문.
+			//int로 하면 범위 벗어남. 2^63이 1억이 넘기 때문.//
 			long ten=0,idx=1;
 			for (int i = n.length()-1; i>=0 ; i--) {
 				if(n.charAt(i)>='A'&& n.charAt(i)<='Z') {
