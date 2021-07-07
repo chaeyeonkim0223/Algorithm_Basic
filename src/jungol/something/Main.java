@@ -1,47 +1,73 @@
 package jungol.something;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
-
+	static int map[][];
+	static int[] dr= {-1,0,1,1};
+	static int[] dc= {1,1,1,0};
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		Card[] cards = new Card[5];
+		map = new int [5][5];
+		int ans=0;
 		for (int i = 0; i < 5; i++) {
-			cards[i] = new Card(sc.next(), sc.nextInt());
+			for (int j = 0; j < 5; j++) {
+				map[i][j] = sc.nextInt();
+			} 
 		}
-		int ans=0, res=0;//ans가 최종
-		//① 카드 5장이 모두 같은 색이면서 숫자가 연속적일 때, 점수는 가장 높은 숫자에 900을 더한다.
-		Arrays.sort(cards);
-		boolean flag = true;
-		for (int i = 0; i < 4; i++) {
-			if(!(cards[i].color.equals(cards[i+1].color)) && cards[i].num+1!=cards[i+1].num) flag = false;
+		L : for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 5; j++) {
+				int num = sc.nextInt();
+				change(num);
+				int temp = bingoCheck();
+				//total이 3개이상있다면 탈출
+				if(temp==1) {
+					ans = 5*i + (1+j);
+					break L;
+				}
+			} 
+		}System.out.println();
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 5; j++) {
+				System.out.print(map[i][j]+" ");
+			} System.out.println();
 		}
-		if(flag) {
-			res = cards[4].num + 900;
-			ans = Math.max(ans, res);
-		}
-	}
-	static class Card implements Comparable<Card>{
-		String color;
-		int num;
+		System.out.println(ans);
 		
-		public Card(String color, int num) {
-			super();
-			this.color = color;
-			this.num = num;
+	}
+	static void change(int num) {
+		for (int t = 0; t < 5; t++) {
+			for (int k = 0; k < 5; k++) {
+				if( map[t][k] == num) {
+					System.out.print(num+" ");
+					map[t][k] =-1;
+					return;
+				}
+			}
+		}//end point
+	}
+	static int bingoCheck() {
+		int total=0;
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 5; j++) {
+				if(map[i][j]==-1) {
+					for (int d = 0; d < 4; d++) {
+						int cnt=1;
+						for (int k = 0; k < 4; k++) {
+						int nr = i + dr[d];
+						int nc = j + dc[d];
+							if(nr>=0 && nr<5 && nc>=0 && nc<5 && map[nr][nc]==-1) {
+								cnt++;
+							}
+						}
+						if(cnt==5) total++;
+					}
+					if(total>=3) return 1;
+					else return 0;
+				}
+			} 
 		}
-
-		@Override
-		public String toString() {
-			return "Card [color=" + color + ", num=" + num + "]";
-		}
-		@Override
-		public int compareTo(Card o) {
-			return this.num - o.num;
-			//숫자오름차순
-		}
+		return 0;
 	}
 
 }
