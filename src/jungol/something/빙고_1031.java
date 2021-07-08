@@ -2,7 +2,7 @@ package jungol.something;
 
 import java.util.Scanner;
 
-public class Main {
+public class 빙고_1031 {
 	static int map[][];
 	static int[] dr= {-1,0,1,1};
 	static int[] dc= {1,1,1,0};
@@ -26,12 +26,13 @@ public class Main {
 					break L;
 				}
 			} 
-		}System.out.println();
-		for (int i = 0; i < 5; i++) {
-			for (int j = 0; j < 5; j++) {
-				System.out.print(map[i][j]+" ");
-			} System.out.println();
 		}
+//		System.out.println();
+//		for (int i = 0; i < 5; i++) {
+//			for (int j = 0; j < 5; j++) {
+//				System.out.print(map[i][j]+" ");
+//			} System.out.println();
+//		}
 		System.out.println(ans);
 		
 	}
@@ -39,7 +40,7 @@ public class Main {
 		for (int t = 0; t < 5; t++) {
 			for (int k = 0; k < 5; k++) {
 				if( map[t][k] == num) {
-					System.out.print(num+" ");
+//					System.out.print(num+" ");
 					map[t][k] =-1;
 					return;
 				}
@@ -53,21 +54,23 @@ public class Main {
 				if(map[i][j]==-1) {
 					for (int d = 0; d < 4; d++) {
 						int cnt=1;
+						int nr=i,nc=j;
 						for (int k = 0; k < 4; k++) {
-						int nr = i + dr[d];
-						int nc = j + dc[d];
+						nr += dr[d];
+						nc += dc[d];
 							if(nr>=0 && nr<5 && nc>=0 && nc<5 && map[nr][nc]==-1) {
 								cnt++;
 							}
 						}
 						if(cnt==5) total++;
 					}
-					if(total>=3) return 1;
-					else return 0;
+					
 				}
 			} 
 		}
-		return 0;
+		//total은 2중for문이 다 끝나고 나서 카운트 해주기.
+		if(total>=3) return 1;
+		else return 0;
 	}
 
 }
