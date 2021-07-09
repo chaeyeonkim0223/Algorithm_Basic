@@ -13,7 +13,7 @@ public class 연속부분합찾기_1836 {
 			arr[i] = sc.nextInt();
 		}
 		int sum=0;
-		//지금까지
+		//지금까지 1 2 -2 4
 		for (int i = 0; i < n; i++) {
 			if(sum + arr[i] <0) {
 				ans = Math.max(ans, sum);
