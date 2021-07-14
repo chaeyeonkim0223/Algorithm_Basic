@@ -9,12 +9,11 @@ public class 삽입정렬_1158 {
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		int arr[] = new int [n];
 		List<Integer> list = new ArrayList<>();
-		for (int i = 0; i < arr.length; i++) {
+		for (int i = 0; i < n; i++) {
 			list.add(sc.nextInt());
 		}
-		for (int i = 1; i < arr.length; i++) {
+		for (int i = 1; i < list.size(); i++) {
 			//1~끝까지 계속 수행 어차피 index=0일때는 아무변화도 안일어나니까 1부터 시작
 			int start=i;
 			//처음부터~현재까지 비교. 현재보다 큰 수를 만난다면 break
