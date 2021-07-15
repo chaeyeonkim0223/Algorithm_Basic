@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
+//삽입정렬 array로 구현 참고: https://st-lab.tistory.com/179
 public class 삽입정렬_1158 {
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
