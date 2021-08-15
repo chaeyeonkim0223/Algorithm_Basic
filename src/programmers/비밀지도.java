@@ -28,7 +28,7 @@ public class 비밀지도 {
 	            	arr2_binary[i][j] = now2.charAt(j-diff2)-'0';
 				}
 	        }
-	        // step 2. 겹치기
+	        // step 2. 겹치기 
 	        char [][]new_secret = new char [n][n];
 	         for(int i=0; i<new_secret.length;i++){
 	             // 둘중 하나라도 1이면 1 아니면 0
