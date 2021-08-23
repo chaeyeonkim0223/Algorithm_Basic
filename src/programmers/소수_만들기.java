@@ -26,11 +26,7 @@ public class 소수_만들기 {
 	    static void combi(int []nums, int start, int idx, int sum){
 	        if(idx == 3 ){
 	            // 소수판별
-	            
-	            if(isS(sum)){
-	                //System.out.println(sum);
-	                cnt++;  
-	            } 
+	            if(isS(sum)) cnt++;  
 	            return;
 	        }
 	        for(int i=start; i<nums.length;i++){
