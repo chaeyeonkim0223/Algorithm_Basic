@@ -1,9 +1,9 @@
-	package programmers;
+package programmers;
 	
-	import java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-	import java.util.List;
+import java.util.List;
 	
 	public class 실패율 {
 		static int N = 4;
