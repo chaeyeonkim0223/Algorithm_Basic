@@ -51,5 +51,14 @@ public class 비밀지도 {
 	        }
 	        return answer;
 	    }
+	 /*
+	  * 	String.format으로 자릿수 맞춰주기.
+	  * 	replaceAll로 숫자를 문자로 변환해주기.
+	  *     for (int i = 0; i < n; i++) {
+            result[i] = String.format("%" + n + "s", result[i]);
+            result[i] = result[i].replaceAll("1", "#");
+            result[i] = result[i].replaceAll("0", " ");
+        }
+	  */
 
 }
