@@ -12,8 +12,10 @@ public class 비밀지도 {
 		System.out.println(Arrays.toString(answer));
 	}
 	 public static String[] solution(int n, int[] arr1, int[] arr2) {
-	        // step 1. 배열 1,2 만들기
+		 	// 풀이 1.
+		    // step 1. 배열 1,2 만들기
 	        // 2진수로변환
+		 	/*
 	        int[][] arr1_binary = new int [n][n];
 	        int[][] arr2_binary = new int [n][n];
 	        for(int i=0; i<n;i++){
@@ -50,15 +52,31 @@ public class 비밀지도 {
 	            answer[i] = String.valueOf(str);
 	        }
 	        return answer;
+	        */
+	        // 풀이 2.
+	        String[] answer = new String [n];
+	        for(int i=0; i<n ; i++){
+	            //2진수로 변환
+	            String temp = "";
+	            String n1 = Integer.toBinaryString(arr1[i]);
+	            String n2 = Integer.toBinaryString(arr2[i]);
+	            n1 = String.format("%" + n + "s", n1);
+	            n2 = String.format("%" + n + "s", n2);
+	            n1 = n1.replaceAll(" ", "0");
+	            n2 = n2.replaceAll(" ", "0");
+	            for(int j=0; j<n; j++){
+	                if(n1.charAt(j) == '0' && n2.charAt(j) == '0'){
+	                    temp +=" ";
+	                }else{
+	                    temp +="#";
+	                }
+	            }
+	            answer[i]= temp;
+	            //or연산
+	            //string format으로 넣기
+	        }
+	        return answer;
+	        
 	    }
-	 /*
-	  * 	String.format으로 자릿수 맞춰주기.
-	  * 	replaceAll로 숫자를 문자로 변환해주기.
-	  *     for (int i = 0; i < n; i++) {
-            result[i] = String.format("%" + n + "s", result[i]);
-            result[i] = result[i].replaceAll("1", "#");
-            result[i] = result[i].replaceAll("0", " ");
-        }
-	  */
 
 }
