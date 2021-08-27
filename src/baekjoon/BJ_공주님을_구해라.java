@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class 공주님을_구해라 {
+public class BJ_공주님을_구해라 {
 	static int N, M, T;
 	static int[][] map;
 	static boolean visit[][][];

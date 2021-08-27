@@ -2,7 +2,7 @@ package baekjoon;
 
 import java.util.Scanner;
 
-public class 창영이와_점프 {
+public class BJ_창영이와_점프 {
 	static int N,K,arr[],max;
 	public static void main(String[] args) {
 //		시작점 임의설정, 점프 최대 1번 

@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
-public class 택배_배송 {
+public class BJ_택배_배송 {
 	static class Node implements Comparable<Node>{
 		int e,w;
 		public Node(int e, int w) {
