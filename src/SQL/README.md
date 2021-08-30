@@ -1,8 +1,8 @@
-# 코딩 테스트 SQL 중요 개념정리
+# 🐱‍🐉코딩 테스트 SQL 중요 개념정리
 
 MYSQL은 대소문자를 구분하지 않는다.
 
-# SELECT
+# ⚪SELECT
 
 > ORDER BY
 
@@ -20,7 +20,7 @@ MYSQL은 대소문자를 구분하지 않는다.
   - LIMIT [ 4, 10 ] → 5번째부터 10개 가져옴
   - 첫번째 인덱스는 파라미터 0부터 시작
 
-# SUM, MAX, MIN, AVG, COUNT
+# ⚪SUM, MAX, MIN, AVG, COUNT
 
 - NULL인 경우는 집계하지 않는다.
 - COUNT 의 경우
@@ -30,7 +30,7 @@ MYSQL은 대소문자를 구분하지 않는다.
 중복을 제거하는 경우 
 → COUNT ( DISTINCT OOO ) 
 
-# GROUP BY
+# ⚪GROUP BY
 
 보통 집계함수와 같이 쓰이며 평균적으로 아래와 같은 형태로 쓰인다.
 
@@ -48,7 +48,7 @@ GROUP BY ANIMAL_TYPE
 
 - GROUP BY한 결과에 조건을 붙이고 싶을 때 사용
 
-# IS NULL
+# ⚪IS NULL
 
 > NULL인값을 구할 때
 
@@ -61,7 +61,7 @@ GROUP BY ANIMAL_TYPE
 - IFNULL( 값 1, 값 2 )
 - 값 1이 NULL인 경우 값2로 표시한다.
 
-## IF문
+# ⚪IF문
 
 IF ( 조건문, 참일때의 값, 거짓일 때의 값 )
 
@@ -72,7 +72,7 @@ A와 B가 들어갈 경우 O로 표시, 그렇지 않으면 X로 표시
 IF((COLUM LIKE "%A%" OR COLUM LIKE "%B%"),'O','X') 
 ```
 
-# JOIN
+# ⚪JOIN
 
 - A_TABLE JOIN B_TABLE
 
@@ -125,7 +125,7 @@ FROM A JOIN B ON A.ANIMAL_ID = B.ANIMAL_ID
 WHERE O.DATETIME < I.DATETIME
 ```
 
-# String, Date
+# ⚪String, Date
 
 - IN
   - 조건의 범위를 지정할 때 WHERE 절에 사용함
@@ -162,7 +162,7 @@ FROM ANIMAL_INS
 ```
 ![image](https://user-images.githubusercontent.com/86418158/131340469-5acf1db1-7ee3-4417-83ea-bf2f1478456b.png)
 
-## 비슷한 함수들
+# ⚪비슷한 함수들
 
 > SUBSTRING
 
@@ -188,7 +188,7 @@ EX) LEFT ( ABC, 2 ) → AB
 RIGHT ( 문자열, 길이 ) 
 EX) RIGHT ( ABC, 2 ) → BC
 
-# SUB QUERY
+# ⚪SUB QUERY
 
 구할 것 : B테이블에 없고, A테이블에만 있는 데이터 구하기
 
@@ -212,7 +212,7 @@ USING(ANIMAL_ID)
 WHERE B.ANIMAL_ID IS NULL
 ```
 
-# ETC
+# ⚪ETC
 
 > BETWEEN A AND B
 
