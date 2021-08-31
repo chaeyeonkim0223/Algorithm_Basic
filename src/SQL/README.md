@@ -231,3 +231,7 @@ WHERE B.ANIMAL_ID IS NULL
 - 버림
 - TRUNCATE ( 숫자, 보여질 자릿수 )
 - EX ) TRUNCATE ( 1.123 , 1 ) → 1.1
+
+# ⭐ New ! 
+- 중복합
+- 추후업데이트 . . . . 
