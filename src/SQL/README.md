@@ -142,7 +142,7 @@ WHERE O.DATETIME < I.DATETIME
 - REGEXP ( 특정 문자열이 여러개일 경우 )
 
   ```sql
-  WHERE COLUM REGEXP "(A|B)"
+  WHERE COLUM REGEXP ('A|B')
   ```
 
 DATE_FORMAT
