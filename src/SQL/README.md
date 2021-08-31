@@ -223,6 +223,7 @@ WHERE B.ANIMAL_ID IS NULL
 - 반올림
 - ROUND ( 숫자, 반올림된 자릿수 )
 - EX ) ROUND ( 1.123 , 1 ) → 1.1
+- EX ) ROUND ( 1.123 , -1 ) → 1
 
 > TRUNCATE
 
