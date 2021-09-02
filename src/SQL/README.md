@@ -142,7 +142,7 @@ WHERE O.DATETIME < I.DATETIME
 - REGEXP ( 특정 문자열이 여러개일 경우 )
 
   ```sql
-  WHERE COLUM REGEXP "(A|B)"
+  WHERE COLUM REGEXP ('A|B')
   ```
 
 DATE_FORMAT
@@ -221,11 +221,17 @@ WHERE B.ANIMAL_ID IS NULL
 > ROUND
 
 - 반올림
-- ROUND ( 숫자, 반올림된 자릿수 )
+- ROUND ( 숫자, 보여질 자릿수 )
+- 💥소수점 기준으로 1번째, -1번째 라고 생각하기
 - EX ) ROUND ( 1.123 , 1 ) → 1.1
+- EX ) ROUND ( 1.123 , -1 ) → 1
 
 > TRUNCATE
 
 - 버림
-- TRUNCATE ( 숫자, 버릴 자릿수-1 )
+- TRUNCATE ( 숫자, 보여질 자릿수 )
 - EX ) TRUNCATE ( 1.123 , 1 ) → 1.1
+
+# ⭐ New ! 
+- 중복합
+- 추후업데이트 . . . . 
